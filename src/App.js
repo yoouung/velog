@@ -2,22 +2,22 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+  let user_id = 'yoouung';
+
+  return ( // 화면
+    <div className = "App">
+
+      <div className = "header-left">
+        <img className = "page-logo" src="image/emoji.png"></img>
+        <h3>yolog</h3>
+      </div>
+
+      <div className = "main-container">
+        <img className = "profile-image" src="image/emoji.png"></img>
+        <h3 className = "user-id">{ user_id }</h3>
+      </div>
+
     </div>
   );
 }

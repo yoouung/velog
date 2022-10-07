@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+
 }
 
 .App-logo {
@@ -28,6 +29,36 @@
   color: #61dafb;
 }
 
+
+.header-left {
+  display: flex;
+  padding-left: 20px;
+  padding-top: 20px;
+  font-family: "Binggrae-Two";
+}
+
+.page-logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 70%;
+  /* margin: 위 오 아래 왼 */
+  margin: 0px 10px 0px 0px;
+}
+
+.profile-image {
+  width: 8%;
+  height: 8%;
+}
+
+.main-container {
+  width: 95%;
+  max-width: 500px;
+  margin: 20px auto 20px auto;
+
+  /* box-shadow: 0px 0px 3px 0px black; */
+  padding: 20px;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -36,3 +67,12 @@
     transform: rotate(360deg);
   }
 }
+
+@font-face {
+  font-family: 'Binggrae-Two';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Binggrae-Bold.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');
