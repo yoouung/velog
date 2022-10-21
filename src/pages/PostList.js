@@ -7,18 +7,22 @@ function PostList() {
   
   return (
     <>
-      <div className="content">
-        <h3 className="titleText">{title[0]}</h3>
-        <text className="contentText">{contents[0]}</text>
+      <div className="home-container">
+          <div className="container-main">
+      
+          {
+            title.map(function (a, i) {
+              return (
+              <div className="content">
+                  <h3 className="titleText">{title[i]}</h3>
+                  <text className="contentText">{contents[i]}</text>
+              </div>
+              )
+            })
+          }
+        </div>
       </div>
-      <div className="content">
-        <h3 className="titleText">{title[1]}</h3>
-        <text className="contentText">{contents[1]}</text>
-      </div>
-      <div className="content">
-        <h3 className="titleText">{title[2]}</h3>
-        <text className="contentText">{contents[2]}</text>
-      </div>
+            
     </>
   );
 }
