@@ -3,7 +3,11 @@ import { Image } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 function Home() {
-  let [profilecontent, setProfile] = useState("여기에 프로필이 보여지며, 마크다운 형식으로 직접 수정 가능");
+  let [setProfile, updateProfile] = useState('');
+
+  const onChange = (e) => {
+    updateProfile(e.target.value)
+  }
 
   return (
     // 화면
@@ -18,8 +22,8 @@ function Home() {
               <h3 className="user-name">박재영</h3>
             </div>
             <hr></hr>
-            <div><div className="page-box"><PostPageList /></div></div>
-            <div className="contents-box">{profilecontent}</div>
+            <div><div className="page-box"><TagList /></div></div>
+            <div className="contents-box" onChange={onChange} value="text">{setProfile}</div>
             
           </div>
         </div>
@@ -30,21 +34,30 @@ function Home() {
   );
 }
 
-function PostPageList() {
-  let [pageName, setPageName] = useState(['profile', 'postlist', 'postlist2', 'postlist3'])
+function TagList() {
+  let [TagName, updateTagName] = useState(['profile', 'postlist', 'postlist2', 'postlist3'])
 
   return (
     <>
       <div className="page-block">
         <ul>
           {
-            pageName.map(function (a, i) {
+            TagName.map(function (a, i) {
               return (
                 <div className="list">
-                  <Link to={"/"+ pageName[i]} style={{ textDecoration: 'none', color: 'black' }}>
-                    {pageName[i]}
-                  </Link>
+                  {TagName[i] == 'profile'
+                    ? <Link to={"/"} style={{ textDecoration: 'none', color: 'black' }}>
+                      {TagName[i]}
+                    </Link>
+                    : <Link to={"/" + TagName[i]} style={{ textDecoration: 'none', color: 'black' }}>
+                      {TagName[i]}
+                    </Link>}
                 </div>
+                // <div className="list">
+                //   {pageName[i] == 'profile'
+                //     ? <TagList pageName={'/'} />
+                //     : <TagList pageName={pageName[i]} />}
+                // </div>
               )
             })
           }
@@ -53,12 +66,20 @@ function PostPageList() {
       
     </>
   );
-  // pageName.map(function(a){
-  //   return (
-  //   <div className="list">
-  //     <text>{ a }</text>
-  //   </div> )
-  // }) 
 }
 
-export default Home;
+// function TagList(props) {
+//   <Link to={props.pageName} style={{ textDecoration: 'none', color: 'black' }}>
+//     {props.pageName}
+//   </Link>
+// }
+  
+
+function editProfile() {
+  console.log("editProfile clicked")
+
+  // updateProfile("프로필 업데이트")
+}
+
+
+export {Home as default, editProfile};
