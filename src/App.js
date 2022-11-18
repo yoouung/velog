@@ -1,8 +1,9 @@
 import React from 'react';
 import './App.css';
-import { Route, Routes } from 'react-router-dom'
+import { Route, Routes } from 'react-router-dom';
 
-import Header from './components/Header'
+import Header from './components/Header';
+import Footer from './components/Footer';
 import Home from './pages/Home';
 import PostList from './pages/PostList';
 import PostWrite from './pages/PostWrite';
@@ -21,6 +22,7 @@ function App() {
         <Route path="/search" element={<Search />} />
         <Route path="/settings" element={<Settings />} />
       </Routes>
+      {/* <Footer /> */}
     </>
   );
 }

@@ -1,13 +1,9 @@
 import { useState } from "react";
 import { Image } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import ProfileText from "../components/ProfileText";
 
 function Home() {
-  let [setProfile, updateProfile] = useState('');
-
-  const onChange = (e) => {
-    updateProfile(e.target.value)
-  }
 
   return (
     // 화면
@@ -22,8 +18,8 @@ function Home() {
               <h3 className="user-name">박재영</h3>
             </div>
             <hr></hr>
-            <div><div className="page-box"><TagList /></div></div>
-            <div className="contents-box" onChange={onChange} value="text">{setProfile}</div>
+            <div><div className="page-box"><PostPageList /></div></div>
+            <ProfileText/>
             
           </div>
         </div>
@@ -34,7 +30,7 @@ function Home() {
   );
 }
 
-function TagList() {
+function PostPageList() {
   let [TagName, updateTagName] = useState(['profile', 'postlist', 'postlist2', 'postlist3'])
 
   return (
@@ -53,11 +49,6 @@ function TagList() {
                       {TagName[i]}
                     </Link>}
                 </div>
-                // <div className="list">
-                //   {pageName[i] == 'profile'
-                //     ? <TagList pageName={'/'} />
-                //     : <TagList pageName={pageName[i]} />}
-                // </div>
               )
             })
           }
@@ -66,20 +57,18 @@ function TagList() {
       
     </>
   );
+  // pageName.map(function(a){
+  //   return (
+  //   <div className="list">
+  //     <text>{ a }</text>
+  //   </div> )
+  // })
 }
-
-// function TagList(props) {
-//   <Link to={props.pageName} style={{ textDecoration: 'none', color: 'black' }}>
-//     {props.pageName}
-//   </Link>
-// }
-  
 
 function editProfile() {
   console.log("editProfile clicked")
 
   // updateProfile("프로필 업데이트")
 }
-
 
 export {Home as default, editProfile};
