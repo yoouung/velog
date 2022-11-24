@@ -7,7 +7,7 @@ function Header() {
     <>
       <div className="header">
         {/* <img className="page-logo" src="image/emoji.png"></img> */}
-        <Image className="page-logo" src="image/logo.png" onClick={() => window.location = '/'}></Image>
+        <Image className="page-logo" src="image/logo.png" onClick={() => window.location = '/'} ></Image>
 
         {/* 마우스 다가가면 글씨 진하게 */}
         <div className="button-group">

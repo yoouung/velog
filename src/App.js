@@ -22,7 +22,7 @@ function App() {
         <Route path="/search" element={<Search />} />
         <Route path="/settings" element={<Settings />} />
       </Routes>
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 }

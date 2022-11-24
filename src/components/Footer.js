@@ -1,7 +1,10 @@
 function Footer() {
     return (
         <>
-            <div className="footer">made by @yoouung</div>
+            <div className="footer">
+                <div>made by @yoouung</div>
+            </div>
+            
         </>
     )
 }

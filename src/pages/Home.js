@@ -8,7 +8,7 @@ function Home() {
   return (
     // 화면
     <>
-      <div>
+      <div style={{height: 'auto', minHeight: '100vh', marginBottom: '70px', paddingBottom: '50px'}}>
         <div className="home-container">
           <div className="container-main">
             <div className="user-info-box">
@@ -17,9 +17,14 @@ function Home() {
               <Image className="profile-image" src="image/profile.png" roundedCircle></Image>
               <h3 className="user-name">박재영</h3>
             </div>
-            <hr></hr>
-            <div><div className="page-box"><PostPageList /></div></div>
-            <ProfileText/>
+            <hr/>
+            <div>
+              <div className="page-box"><PostPageList /></div>
+            </div>
+            <div>
+              <ProfileText/>
+            </div>
+            
             
           </div>
         </div>
