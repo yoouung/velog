@@ -15,11 +15,6 @@ function ProfileText() {
     let [Language, updateLanguage] = useState(language);
     let [Skill, updateSkill] = useState(skill);
     let [Award, updateAward] = useState(award);
-
-
-    // const onChange = (e) => {
-    //     updateProfile(e.target.value)
-    // }
     
     return (
         <>

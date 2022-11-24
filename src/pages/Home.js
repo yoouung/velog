@@ -62,18 +62,6 @@ function PostPageList() {
       
     </>
   );
-  // pageName.map(function(a){
-  //   return (
-  //   <div className="list">
-  //     <text>{ a }</text>
-  //   </div> )
-  // })
 }
 
-function editProfile() {
-  console.log("editProfile clicked")
-
-  // updateProfile("프로필 업데이트")
-}
-
-export {Home as default, editProfile};
+export default Home;
