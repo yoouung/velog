@@ -1,25 +1,29 @@
-import React from "react";
-import { useState } from "react";
+import { React, useState } from "react";
+import Stack from 'react-bootstrap/Stack';
 
 function PostList() {
-  let [title, setTitle] = useState(["글제목1", "글제목2", "글제목3"]);
-  let [contents, setContents] = useState(["글내용1", "글내용2", "글내용3"]);
+  let TitleList = ["글제목1", "글제목2", "글제목3"]
+
+  let [Title, setTitle] = useState(TitleList);
+  // let [Contents, setContents] = useState(["글내용1", "글내용2", "글내용3"]);
   
   return (
     <>
       <div className="home-container">
           <div className="container-main">
-      
           {
-            title.map(function (a, i) {
+            TitleList.map(function (a, i) {
               return (
-              <div className="content">
-                  <h3 className="titleText">{title[i]}</h3>
-                  <text className="contentText">{contents[i]}</text>
-              </div>
+                <Stack gap={10}>
+                      <div className="post">{TitleList[i]}</div>
+                </Stack>
               )
             })
           }
+          
+          
+
+          
         </div>
       </div>
             

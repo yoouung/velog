@@ -36,7 +36,9 @@ function Home() {
 }
 
 function PostPageList() {
-  let [TagName, updateTagName] = useState(['profile', 'postlist', 'postlist2', 'postlist3'])
+  const TagNameList = ['profile', 'postlist', 'java', 'python']
+
+  let [TagName, updateTagName] = useState(TagNameList)
 
   return (
     <>

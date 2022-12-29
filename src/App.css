@@ -44,7 +44,8 @@ div {
 .footer {
   display: flex;
   position: relative;
-  transform: translateY(-100%);
+  /* transform: translateY(-100%); */
+  transform: translateY(-0%);
   height: 70px;
   align-items: center;
   justify-content: center;
@@ -150,9 +151,6 @@ ul {
 
 }
 
-.wrapper {
-  /* white-space: pre-line; */
-}
 /* list page */
 
 
